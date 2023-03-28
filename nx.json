@@ -1,0 +1,27 @@
+{
+  "npmScope": "largerepo",
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": "*",
+    ".eslintrc.json": "*",
+    "nx.json": "*",
+    "tsconfig.base.json": "*"
+  },
+  "projects": {
+    "app": {
+      "tags": []
+    },    
+    "app2": {
+      "tags": []
+    },
+    "child": {
+      "tags": []
+    },
+    "parent": {
+      "tags": []
+    }
+  },
+  "affected": {
+    "defaultBase": "master"
+  }
+}
