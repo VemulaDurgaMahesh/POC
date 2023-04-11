@@ -1,5 +1,5 @@
 {
-  "npmScope": "largerepo",
+  "npmScope": "ace",
   "implicitDependencies": {
     "workspace.json": "*",
     "package.json": "*",
@@ -8,10 +8,10 @@
     "tsconfig.base.json": "*"
   },
   "projects": {
-    "app": {
+    "home": {
       "tags": []
-    },    
-    "app2": {
+    },
+    "gps": {
       "tags": []
     },
     "child": {

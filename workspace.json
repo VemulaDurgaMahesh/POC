@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "projects": {   
-    "app": {
+  "projects": {
+    "gps": {
       "projectType": "application",
       "schematics": {},
-      "root": "apps/app",
-      "sourceRoot": "apps/app/src",
-      "prefix": "app",
+      "root": "apps/gps",
+      "sourceRoot": "apps/gps/src",
+      "prefix": "gps",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:webpack-browser",
           "options": {
-            "outputPath": "dist/apps/app",
-            "index": "apps/app/src/index.html",
-            "main": "apps/app/src/main.ts",
-            "polyfills": "apps/app/src/polyfills.ts",
-            "tsConfig": "apps/app/tsconfig.app.json",
+            "outputPath": "dist/apps/gps",
+            "index": "apps/gps/src/index.html",
+            "main": "apps/gps/src/main.ts",
+            "polyfills": "apps/gps/src/polyfills.ts",
+            "tsConfig": "apps/gps/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/app/src/favicon.ico", "apps/app/src/assets"],
-            "styles": ["apps/app/src/styles.css"],
+            "assets": ["apps/gps/src/favicon.ico", "apps/gps/src/assets"],
+            "styles": ["apps/gps/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/app/src/environments/environment.ts",
-                  "with": "apps/app/src/environments/environment.prod.ts"
+                  "replace": "apps/gps/src/environments/environment.ts",
+                  "with": "apps/gps/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -55,65 +55,65 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app:build"
+            "browserTarget": "gps:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app:build:production"
+              "browserTarget": "gps:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app:build"
+            "browserTarget": "gps:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/app/src/**/*.ts",
-              "apps/app/src/**/*.html"
+              "apps/gps/src/**/*.ts",
+              "apps/gps/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/app/jest.config.js",
+            "jestConfig": "apps/gps/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/apps/app"]
+          "outputs": ["coverage/apps/gps"]
         }
       }
-    }, 
-    "app2": {
+    },
+    "home": {
       "projectType": "application",
       "schematics": {},
-      "root": "apps/app2",
-      "sourceRoot": "apps/app2/src",
-      "prefix": "app2",
+      "root": "apps/home",
+      "sourceRoot": "apps/home/src",
+      "prefix": "home",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:webpack-browser",
           "options": {
-            "outputPath": "dist/apps/app2",
-            "index": "apps/app2/src/index.html",
-            "main": "apps/app2/src/main.ts",
-            "polyfills": "apps/app2/src/polyfills.ts",
-            "tsConfig": "apps/app2/tsconfig.app.json",
+            "outputPath": "dist/apps/home",
+            "index": "apps/home/src/index.html",
+            "main": "apps/home/src/main.ts",
+            "polyfills": "apps/home/src/polyfills.ts",
+            "tsConfig": "apps/home/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/app2/src/favicon.ico", "apps/app2/src/assets"],
-            "styles": ["apps/app2/src/styles.css"],
+            "assets": ["apps/home/src/favicon.ico", "apps/home/src/assets"],
+            "styles": ["apps/home/src/styles.css"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/app2/src/environments/environment.ts",
-                  "with": "apps/app2/src/environments/environment.prod.ts"
+                  "replace": "apps/home/src/environments/environment.ts",
+                  "with": "apps/home/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -142,36 +142,36 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app2:build"
+            "browserTarget": "home:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app2:build:production"
+              "browserTarget": "home:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app2:build"
+            "browserTarget": "home:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/app2/src/**/*.ts",
-              "apps/app2/src/**/*.html"
+              "apps/home/src/**/*.ts",
+              "apps/home/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
           "options": {
-            "jestConfig": "apps/app2/jest.config.js",
+            "jestConfig": "apps/home/jest.config.js",
             "passWithNoTests": true
           },
-          "outputs": ["coverage/apps/app2"]
+          "outputs": ["coverage/apps/home"]
         }
       }
     }, 
@@ -272,6 +272,5 @@
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
     }
-  },
-  "defaultProject": "app2"
+  }
 }
